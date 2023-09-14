@@ -2,3 +2,12 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
+
+# Check for console.log in staged files
+if git diff --cached --name-only -- '*.js' '*.jsx' | xargs grep -n 'console\.log'; then
+  echo "Error: Found console.log statements in staged files. Please remove them before committing."
+  exit 1
+fi
+
+# If no issues are found, the commit proceeds.
+exit 0
