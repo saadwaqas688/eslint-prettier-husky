@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <p>
-          Edit <code>src/App.js</code> and save to second commit
+          Edit <code>src/App.js</code> and save to third commit
         </p>
 
         <a
